@@ -1,4 +1,4 @@
-package med.voll.api.medico;
+package med.voll.api.domain.medico;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
@@ -7,9 +7,9 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 
 public record DadosCadastroMedico(
-        @NotBlank
+        @NotBlank(message = "Nome inválido.")
         String nome,
-        @NotBlank
+        @NotBlank(message = "Endereço de email é inválido.")
         @Email
         String email,
         @NotBlank
