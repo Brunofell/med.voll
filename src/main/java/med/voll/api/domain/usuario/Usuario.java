@@ -25,7 +25,7 @@ public class Usuario implements UserDetails {
     private String login;
     private String senha;
 
-    @Override // controle de permissão adm pou user e etc
+    @Override // controle de permissão adm ou user e etc
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority("ROLE_USER"));
     }
